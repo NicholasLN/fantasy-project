@@ -1,0 +1,17 @@
+#root, .map{
+    width: 100vw;
+    height: 100vh;
+}
+.react-transform-wrapper{
+    margin:auto;
+    background-color:#D4F1F9
+}
+
+.react-transform-component{
+    margin:auto;
+    height: 100vh;
+    width: 100vw;
+}
+g{
+    position: absolute;
+}
