@@ -66,7 +66,7 @@ export default function Cells({ mode, borders, projection }) {
       }
 
       let path = (
-        <a href={"/cell/" + props.id}>
+        // <a href={"/cell/" + props.id}>
           <path
             key={"path" + idx}
             d={pathGenerator(f)}
@@ -77,7 +77,7 @@ export default function Cells({ mode, borders, projection }) {
             className="states"
             biome={props.biome}
           />
-        </a>
+        ///</a>
       );
       return path;
     });
