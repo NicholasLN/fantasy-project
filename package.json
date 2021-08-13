@@ -1,4 +1,5 @@
 {
+  "homepage": "http://PhilScott4USA.github.io/fantasy-project",
   "name": "fantasy-project",
   "version": "0.1.0",
   "private": true,
@@ -6,10 +7,12 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^5.0.2",
     "chroma-js": "^2.1.2",
     "d3-geo": "^3.0.1",
     "randomcolor": "^0.6.2",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-svg-pan-zoom": "^3.10.0",
@@ -18,6 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

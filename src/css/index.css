@@ -5,7 +5,8 @@
 .react-transform-wrapper{
     overflow: auto;
     margin:auto;
-    background-color:#D4F1F9
+    background-color:#D4F1F9;
+
 }
 
 .react-transform-component{
