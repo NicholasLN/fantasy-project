@@ -34,6 +34,9 @@ export default function Map(props) {
           <Button variant="secondary" onClick={() => setMode("population")}>population</Button>
           <Button variant="secondary" onClick={() => setBorders(true)}>borders on</Button>
           <Button variant="secondary" onClick={() => setBorders(false)}>borders off</Button>
+          </ButtonGroup>
+          <br/>
+          <ButtonGroup>
           <Button onClick={() => setRoads(true)}>roads on</Button>
           <Button onClick={() => setRoads(false)}>roads off</Button>
           <Button onClick={() => setMarkers(true)}>markers on</Button>
@@ -43,7 +46,9 @@ export default function Map(props) {
         <TransformComponent>
           <svg
             viewBox="0 0 1920 1080"
+            maxWidth="100%"
             width="auto"
+            maxHeight="100vh"
             height="auto"
           >
             <Cells mode={mode} borders={borders} projection={projection}/>
