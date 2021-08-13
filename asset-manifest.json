@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/fantasy-project/static/css/main.6ac24581.chunk.css",
-    "main.js": "/fantasy-project/static/js/main.aa3e062d.chunk.js",
-    "main.js.map": "/fantasy-project/static/js/main.aa3e062d.chunk.js.map",
+    "main.js": "/fantasy-project/static/js/main.e624a50f.chunk.js",
+    "main.js.map": "/fantasy-project/static/js/main.e624a50f.chunk.js.map",
     "runtime-main.js": "/fantasy-project/static/js/runtime-main.6ff93db2.js",
     "runtime-main.js.map": "/fantasy-project/static/js/runtime-main.6ff93db2.js.map",
-    "static/js/2.cfd4bdda.chunk.js": "/fantasy-project/static/js/2.cfd4bdda.chunk.js",
-    "static/js/2.cfd4bdda.chunk.js.map": "/fantasy-project/static/js/2.cfd4bdda.chunk.js.map",
+    "static/js/2.00cadc66.chunk.js": "/fantasy-project/static/js/2.00cadc66.chunk.js",
+    "static/js/2.00cadc66.chunk.js.map": "/fantasy-project/static/js/2.00cadc66.chunk.js.map",
     "index.html": "/fantasy-project/index.html",
     "static/css/main.6ac24581.chunk.css.map": "/fantasy-project/static/css/main.6ac24581.chunk.css.map",
-    "static/js/2.cfd4bdda.chunk.js.LICENSE.txt": "/fantasy-project/static/js/2.cfd4bdda.chunk.js.LICENSE.txt"
+    "static/js/2.00cadc66.chunk.js.LICENSE.txt": "/fantasy-project/static/js/2.00cadc66.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6ff93db2.js",
-    "static/js/2.cfd4bdda.chunk.js",
+    "static/js/2.00cadc66.chunk.js",
     "static/css/main.6ac24581.chunk.css",
-    "static/js/main.aa3e062d.chunk.js"
+    "static/js/main.e624a50f.chunk.js"
   ]
 }
