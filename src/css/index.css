@@ -3,6 +3,7 @@
     height: 100vh;
 }
 .react-transform-wrapper{
+    overflow: auto;
     margin:auto;
     background-color:#D4F1F9
 }
