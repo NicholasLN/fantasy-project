@@ -23,6 +23,7 @@ export default function Map(props) {
     <>
       <TransformWrapper>
         <div className="buttons">
+          <ButtonGroup>
           <Button variant="secondary" onClick={() => setMode("cells")}>Cells</Button>
           <Button variant="secondary" onClick={() => setMode("nations")}>nations</Button>
           <Button variant="secondary" onClick={() => setMode("religion")}>religion</Button>
@@ -37,12 +38,13 @@ export default function Map(props) {
           <Button onClick={() => setRoads(false)}>roads off</Button>
           <Button onClick={() => setMarkers(true)}>markers on</Button>
           <Button onClick={() => setMarkers(false)}>markers off</Button>
+          </ButtonGroup>
         </div>
         <TransformComponent>
           <svg
             viewBox="0 0 1920 1080"
-            width={"100%"}
-            height={"100%"}
+            width="auto"
+            height="auto"
           >
             <Cells mode={mode} borders={borders} projection={projection}/>
             <Rivers projection={projection}/>
