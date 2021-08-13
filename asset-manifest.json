@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fantasy-project/static/css/main.6517b35b.chunk.css",
+    "main.css": "/fantasy-project/static/css/main.007f9924.chunk.css",
     "main.js": "/fantasy-project/static/js/main.72026c76.chunk.js",
     "main.js.map": "/fantasy-project/static/js/main.72026c76.chunk.js.map",
     "runtime-main.js": "/fantasy-project/static/js/runtime-main.6ff93db2.js",
@@ -8,13 +8,13 @@
     "static/js/2.3b6e82be.chunk.js": "/fantasy-project/static/js/2.3b6e82be.chunk.js",
     "static/js/2.3b6e82be.chunk.js.map": "/fantasy-project/static/js/2.3b6e82be.chunk.js.map",
     "index.html": "/fantasy-project/index.html",
-    "static/css/main.6517b35b.chunk.css.map": "/fantasy-project/static/css/main.6517b35b.chunk.css.map",
+    "static/css/main.007f9924.chunk.css.map": "/fantasy-project/static/css/main.007f9924.chunk.css.map",
     "static/js/2.3b6e82be.chunk.js.LICENSE.txt": "/fantasy-project/static/js/2.3b6e82be.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6ff93db2.js",
     "static/js/2.3b6e82be.chunk.js",
-    "static/css/main.6517b35b.chunk.css",
+    "static/css/main.007f9924.chunk.css",
     "static/js/main.72026c76.chunk.js"
   ]
 }
