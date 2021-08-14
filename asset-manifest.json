@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/fantasy-project/static/css/main.4a96a867.chunk.css",
-    "main.js": "/fantasy-project/static/js/main.fd85eb98.chunk.js",
-    "main.js.map": "/fantasy-project/static/js/main.fd85eb98.chunk.js.map",
+    "main.css": "/fantasy-project/static/css/main.6b76e696.chunk.css",
+    "main.js": "/fantasy-project/static/js/main.a34d96f5.chunk.js",
+    "main.js.map": "/fantasy-project/static/js/main.a34d96f5.chunk.js.map",
     "runtime-main.js": "/fantasy-project/static/js/runtime-main.6ff93db2.js",
     "runtime-main.js.map": "/fantasy-project/static/js/runtime-main.6ff93db2.js.map",
-    "static/js/2.00cadc66.chunk.js": "/fantasy-project/static/js/2.00cadc66.chunk.js",
-    "static/js/2.00cadc66.chunk.js.map": "/fantasy-project/static/js/2.00cadc66.chunk.js.map",
+    "static/js/2.7e36f098.chunk.js": "/fantasy-project/static/js/2.7e36f098.chunk.js",
+    "static/js/2.7e36f098.chunk.js.map": "/fantasy-project/static/js/2.7e36f098.chunk.js.map",
     "index.html": "/fantasy-project/index.html",
-    "static/css/main.4a96a867.chunk.css.map": "/fantasy-project/static/css/main.4a96a867.chunk.css.map",
-    "static/js/2.00cadc66.chunk.js.LICENSE.txt": "/fantasy-project/static/js/2.00cadc66.chunk.js.LICENSE.txt"
+    "static/css/main.6b76e696.chunk.css.map": "/fantasy-project/static/css/main.6b76e696.chunk.css.map",
+    "static/js/2.7e36f098.chunk.js.LICENSE.txt": "/fantasy-project/static/js/2.7e36f098.chunk.js.LICENSE.txt",
+    "static/media/map.82c81a95.map": "/fantasy-project/static/media/map.82c81a95.map"
   },
   "entrypoints": [
     "static/js/runtime-main.6ff93db2.js",
-    "static/js/2.00cadc66.chunk.js",
-    "static/css/main.4a96a867.chunk.css",
-    "static/js/main.fd85eb98.chunk.js"
+    "static/js/2.7e36f098.chunk.js",
+    "static/css/main.6b76e696.chunk.css",
+    "static/js/main.a34d96f5.chunk.js"
   ]
 }
