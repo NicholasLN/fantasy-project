@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import routeData from "../json/world/routes.json";
+import geoData from "../json/world/cells.json";
 import {
   geoPath,
+  geoMercator,
+  geoEquirectangular
 } from "d3-geo";
 
-export default function Routes({ projection }) {
+export default function Routes({ width, height }) {
   const [routes, setroutes] = useState(routeData);
   const [routePaths, setroutePaths] = useState(null);
 
   useEffect(() => {
     updateCellPaths();
-  }, []);
+  }, [width,height]);
 
   const updateCellPaths = () => {
+    const projection = geoEquirectangular().fitSize([width,height],geoData)
     const pathGenerator = geoPath(projection);
 
     var routeSVG = routes.features.map((f, idx) => {

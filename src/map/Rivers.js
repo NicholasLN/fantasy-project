@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import riverData from "../json/world/rivers.json";
-import { geoPath } from "d3-geo";
+import { geoPath, geoMercator, geoEquirectangular } from "d3-geo";
+import geoData from '../json/world/cells.json'
 
-export default function Rivers({ projection }) {
+export default function Rivers({width,height}) {
   const [rivers, setRivers] = useState(riverData);
   const [riverPaths, setRiverPaths] = useState(null);
 
   useEffect(() => {
     updateCellPaths();
-  }, []);
+  }, [width,height]);
 
   const updateCellPaths = () => {
+    const projection = geoEquirectangular().fitSize([width,height],geoData)
     const pathGenerator = geoPath(projection);
     console.log();
     var riverSVG = rivers.features.map((f, idx) => {

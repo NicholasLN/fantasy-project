@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { geoMercator, geoPath } from "d3-geo";
+import { geoMercator, geoPath, geoEquirectangular } from "d3-geo";
 import geoData from "../json/world/cells.json";
 import randomColor from "randomcolor";
 import biomeColors from "../json/customizables/biomeColors.json";
-export default function Cells({ mode, borders, projection }) {
+export default function Cells({ mode, borders, width, height}) {
   const [cells, setCells] = useState(geoData);
   const [cellPaths, setCellPaths] = useState([]);
 
   const updateCellPaths = () => {
-    console.log(projection);
+    const projection = geoEquirectangular().fitSize([width,height],geoData)
     const pathGenerator = geoPath(projection);
     var paths = cells.features.map((f, idx) => {
       var props = f.properties;
@@ -59,7 +59,7 @@ export default function Cells({ mode, borders, projection }) {
             break;
         }
         if (borders) {
-          var strokeFill = "#111111";
+          var strokeFill = "#222222";
         } else {
           var strokeFill = colorFill;
         }
@@ -76,6 +76,7 @@ export default function Cells({ mode, borders, projection }) {
             strokeWidth="1"
             className="states"
             biome={props.biome}
+            state={props.state}
           />
         ///</a>
       );
@@ -87,7 +88,7 @@ export default function Cells({ mode, borders, projection }) {
   useEffect(() => {
     setCells(geoData);
     updateCellPaths();
-  }, [mode, borders]);
+  }, [mode, borders, width, height]);
 
   return <g>{cellPaths}</g>;
 }
