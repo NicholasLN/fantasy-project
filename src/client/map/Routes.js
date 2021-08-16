@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import routeData from "../json/world/routes.json";
-import geoData from "../json/world/cells.json";
+import routeData from "../../json/world/routes.json";
+import geoData from "../../json/world/cells.json";
 import {
   geoPath,
   geoMercator,
@@ -30,7 +30,7 @@ export default function Routes({ width, height }) {
             key={"path" + idx}
             d={pathGenerator(f.geometry)}
             stroke={f.properties.type == "searoutes" ? "#4994aa" : "#592d00"}
-            strokeWidth={f.properties.type == "roads" ? "2" : "0.9"}
+            strokeWidth={f.properties.type == "roads" ? "0.2%" : "0.1%"}
             strokeDasharray={f.properties.type == "roads" ? "" : "4 1"}
             fillOpacity={"0"}
           />

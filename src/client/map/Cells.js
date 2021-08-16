@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { geoMercator, geoPath, geoEquirectangular } from "d3-geo";
-import geoData from "../json/world/cells.json";
+import { geoMercator, geoPath, geoEquirectangular, geoOrthographic } from "d3-geo";
+import geoData from "../../json/world/cells.json";
 import randomColor from "randomcolor";
-import biomeColors from "../json/customizables/biomeColors.json";
+import biomeColors from "../../json/customizables/biomeColors.json";
 export default function Cells({ mode, borders, width, height}) {
   const [cells, setCells] = useState(geoData);
   const [cellPaths, setCellPaths] = useState([]);
@@ -14,7 +14,12 @@ export default function Cells({ mode, borders, width, height}) {
       var props = f.properties;
       if (props.type === "ocean" || props.type === "lake") {
         var colorFill = "#D4F1F9";
-        var strokeFill = "#D4F1F9";
+        if(borders){
+            var strokeFill = "#000000";
+        }
+        else{
+            var strokeFill = "#D4F1F9"
+        }
       } else {
         var colorFill = "";
         var chroma = require("chroma-js");
@@ -30,25 +35,23 @@ export default function Cells({ mode, borders, width, height}) {
             break;
           case "culture":
             colorFill = randomColor({
-              hue: "red",
-              format: "hsl",
-              seed: props.culture,
+              format: "hex",
+              luminosity:"dark",
+              seed: props.culture*999,
             });
             break;
           case "province":
             colorFill = randomColor({
-              format: "hsl",
               luminosity: "dark",
-              seed: props.province * 10,
-              alpha: 0.99,
-              format: "rgba",
+              seed: props.province * 999,
+              format: "hex",
             });
             break;
           case "biomes":
             colorFill = biomeColors[props.biome];
             break;
           case "height":
-            var domain = [-200, 7000];
+            var domain = [-1000, 9138];
             var scale = chroma.scale(["black", "white"]).domain(domain);
             colorFill = scale(props.height).hex();
             break;
@@ -86,6 +89,7 @@ export default function Cells({ mode, borders, width, height}) {
   };
 
   useEffect(() => {
+    console.log("cells rendered");
     setCells(geoData);
     updateCellPaths();
   }, [mode, borders, width, height]);

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import riverData from "../json/world/rivers.json";
+import riverData from "../../json/world/markers.json";
 import { geoPath, geoMercator, geoEquirectangular } from "d3-geo";
-import geoData from '../json/world/cells.json'
+import geoData from '../../json/world/cells.json'
 
-export default function Rivers({width,height}) {
-  const [rivers, setRivers] = useState(riverData);
-  const [riverPaths, setRiverPaths] = useState(null);
+export default function Markers({ width, height}) {
+  const [markers, setMarkers] = useState(riverData);
+  const [markerPaths, setMarkerPaths] = useState(null);
 
   useEffect(() => {
     updateCellPaths();
@@ -15,22 +15,23 @@ export default function Rivers({width,height}) {
     const projection = geoEquirectangular().fitSize([width,height],geoData)
     const pathGenerator = geoPath(projection);
     console.log();
-    var riverSVG = rivers.features.map((f, idx) => {
+    var markerSVG = markers.features.map((f, idx) => {
       //console.log(f);
       let path = (
         <path
           key={"path" + idx}
           d={pathGenerator(f)}
-          stroke={"#D4F1F9"}
+          stroke={"#000000"}
+          fill={"#000000"}
           strokeWidth={"1"}
-          fillOpacity={"0"}
+          fillOpacity={"1"}
         />
       );
       return path;
     });
 
-    setRiverPaths(riverSVG);
+    setMarkerPaths(markerSVG);
   };
 
-  return <g>{riverPaths}</g>;
+  return <g>{markerPaths}</g>;
 }

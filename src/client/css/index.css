@@ -6,16 +6,14 @@
     z-index: 2;
     position: absolute;
 }
-.react-transform-wrapper{
+.map{
     overflow: auto;
     margin:auto;
     background-color:#D4F1F9;
 
 }
-.react-transform-component{
-    margin:auto;
-    height: 100vh !important;
-    width: 100vw !important;
+#cells {
+  shape-rendering: optimizeSpeed;
 }
 g{
     position: absolute;
